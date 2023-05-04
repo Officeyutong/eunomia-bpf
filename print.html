@@ -2628,18 +2628,16 @@ Usage: sigsnoop [-h] [-x] [-k] [-n] [-p PID] [-s SIGNAL]
 <p>目前 eunomia-bpf 跨内核版本的动态加载特性还依赖于内核的 BTF 信息，SIG 社区的 Coolbpf 项目[9]本身能提供 BTF 的自动生成、低版本内核的适配功能，未来低版本内核的支持会基于 Coolbpf 的现有的部分完成。同时，我们也会给 Coolbpf 的 API 实现、远程编译后端提供类似于 eunomia-bpf 的内核态编译和运行完全分离的功能，让使用 Coolbpf API 开发 eBPF 的程序，在远程编译一次过后可以在任意内核版本和架构上直接使用，在部署时无需再次连接远程服务器；也可以将编译完成的 eBPF 程序作为 Go、Python、Rust 等语言的开发包直接使用，让开发者能轻松获得 eBPF 程序上报的信息，而完全不需要再次进行任何 eBPF 程序的编译过程。</p>
 <p>SIG 社区孵化于高校的 Linux Microscope (LMP) 项目[10]中，也已经有一些基于 eunomia-bpf 提供通用的、规范化、可以随时下载运行的 eBPF 程序或工具库的计划，目前还在继续完善的阶段。</p>
 <h2 id="参考资料-3"><a class="header" href="#参考资料-3">参考资料</a></h2>
-<ol>
-<li>eBPF 和 WebAssembly：哪种 VM 会制霸云原生时代? <a href="https://juejin.cn/post/7043721713602789407">https://juejin.cn/post/7043721713602789407</a></li>
-<li>eBPF 和 Wasm：探索服务网格数据平面的未来: <a href="https://cloudnative.to/blog/ebpf-wasm-service-mesh/">https://cloudnative.to/blog/ebpf-wasm-service-mesh/</a></li>
-<li>eBPF 技术探索 SIG 主页： <a href="https://openanolis.cn/sig/ebpfresearch">https://openanolis.cn/sig/ebpfresearch</a></li>
-<li>eunomia-bpf Github 仓库：<a href="https://github.com/eunomia-bpf/eunomia-bpf">https://github.com/eunomia-bpf/eunomia-bpf</a></li>
-<li>eunomia-bpf 龙蜥社区镜像仓库：<a href="https://gitee.com/anolis/eunomia">https://gitee.com/anolis/eunomia</a></li>
-<li>sigsnoop 示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a></li>
-<li>eunomia-bpf 用户手册：<a href="https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641">https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641</a></li>
-<li>更多示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a></li>
-<li>Coolbpf 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555">https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555</a></li>
-<li>LMP 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527">https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527</a></li>
-</ol>
+<p>[1] eBPF 和 WebAssembly：哪种 VM 会制霸云原生时代? <a href="https://juejin.cn/post/7043721713602789407">https://juejin.cn/post/7043721713602789407</a>
+[2] eBPF 和 Wasm：探索服务网格数据平面的未来: <a href="https://cloudnative.to/blog/ebpf-wasm-service-mesh/">https://cloudnative.to/blog/ebpf-wasm-service-mesh/</a>
+[3] eBPF 技术探索 SIG 主页： <a href="https://openanolis.cn/sig/ebpfresearch">https://openanolis.cn/sig/ebpfresearch</a>
+[4] eunomia-bpf Github 仓库：<a href="https://github.com/eunomia-bpf/eunomia-bpf">https://github.com/eunomia-bpf/eunomia-bpf</a>
+[5] eunomia-bpf 龙蜥社区镜像仓库：<a href="https://gitee.com/anolis/eunomia">https://gitee.com/anolis/eunomia</a>
+[6] sigsnoop 示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a>
+[7] eunomia-bpf 用户手册：<a href="https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641">https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641</a>
+[8] 更多示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a>
+[9] Coolbpf 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555">https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555</a>
+[10] LMP 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527">https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527</a></p>
 <div style="break-before: page; page-break-before: always;"></div><p>#! https://zhuanlan.zhihu.com/p/589784489</p>
 <h1 id="如何在-linux-显微镜lmp项目中开启-ebpf-之旅"><a class="header" href="#如何在-linux-显微镜lmp项目中开启-ebpf-之旅">如何在 Linux 显微镜（LMP）项目中开启 eBPF 之旅？</a></h1>
 <p>eBPF 为 Linux 内核提供了可扩展性，使开发人员能够对 Linux 内核进行编程，以便根据他们的业务需求快速构建智能的或丰富的功能。</p>
@@ -2878,10 +2876,10 @@ struct event {
 <p>其中 runtime 和 image 的规范都已经正式发布，而 distribution 的还在工作之中。runtime 规范中介绍了如何运行解压缩到磁盘上的 <a href="https://github.com/opencontainers/runtime-spec/blob/master/bundle.md"><code>Filesystem Bundle</code></a>。在 OCI 标准下，运行一个容器的过程就是下载一个 OCI 的镜像，将其解压到某个 <code>Filesystem Bundle</code> 中，然后某个 OCI Runtime 就会运行这个 Bundle。</p>
 <p>伴随着 image spec 与 distribution spec 的演化，人们开始逐步认识到除了 Container Images 之外，Registries 还能够用来分发 Kubernetes Deployment Files, Helm Charts, docker-compose, <a href="https://cnab.io/">CNAB</a> 等产物。它们可以共用同一套 API，同一套存储，将 Registries 作为一个云存储系统。这就为带来了 OCI Artifacts 的概念，用户能够把所有的产物都存储在 OCI 兼容的 Registiry 当中并进行分发。为此，Microsoft 将 <a href="https://github.com/deislabs/oras">oras</a> 作为一个 client 端实现捐赠给了社区，包括 Harbor 在内的多个项目都在积极的参与。</p>
 <h3 id="orasoci-registry-as-storage"><a class="header" href="#orasoci-registry-as-storage">ORAS(OCI Registry As Storage)</a></h3>
-<p>Registries 正在逐渐演变为通用的组件存储库。为了实现这一目标，ORAS 项目提供了一种将 OCI Artifacts 从 OCI Registries 提交和拉取的方法。正在寻求通用 Registries 客户端的用户可以从<a href="https://oras.land/CLI/">ORAS CLI</a>中得到帮助，而开发人员可以在<a href="https://oras.land/client_libraries/">ORAS 客户端的开发库</a>之上构建自己的客户端。</p>
+<p>Registries 正在逐渐演变为通用的组件存储库。为了实现这一目标，ORAS 项目提供了一种将 OCI Artifacts 从 OCI Registries 提交和拉取的方法。正在寻求通用 Registries 客户端的用户可以从<a href="https://oras.land/docs/category/cli">ORAS CLI</a>中得到帮助，而开发人员可以在<a href="https://oras.land/docs/category/client-libraries">ORAS 客户端的开发库</a>之上构建自己的客户端。</p>
 <p>ORAS 的工作原理与您可能已经熟悉的工具(如 docker)类似。它允许您向 OCI Registries 推送(上传)和提取(下载)内容，并处理登录(身份验证)和令牌流(授权)。ORAS 的不同之处在于将焦点从容器映像转移到其他类型的组件上。</p>
 <p>因此，鼓励新的 OCI Artifacts 的作者定义他们自己的组件媒体类型，以使得他们的用户知道如何对其进行操作。</p>
-<p>如果您希望立即开始发布 OCI Artifacts，请查看<a href="https://oras.land/CLI/">ORAS CLI</a>。希望提供给自己用户体验的开发人员应该使用一个 ORAS 客户端开发库。</p>
+<p>如果您希望立即开始发布 OCI Artifacts，请查看<a href="https://oras.land/docs/category/cli">ORAS CLI</a>。希望提供给自己用户体验的开发人员应该使用一个 ORAS 客户端开发库。</p>
 <h2 id="未来的发展方向"><a class="header" href="#未来的发展方向">未来的发展方向</a></h2>
 <p>未来 LMP 会专注于更多的基于 eBPF 的应用工具和实践的开发：</p>
 <ol>
