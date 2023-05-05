@@ -386,16 +386,18 @@ Usage: sigsnoop [-h] [-x] [-k] [-n] [-p PID] [-s SIGNAL]
 <p>目前 eunomia-bpf 跨内核版本的动态加载特性还依赖于内核的 BTF 信息，SIG 社区的 Coolbpf 项目[9]本身能提供 BTF 的自动生成、低版本内核的适配功能，未来低版本内核的支持会基于 Coolbpf 的现有的部分完成。同时，我们也会给 Coolbpf 的 API 实现、远程编译后端提供类似于 eunomia-bpf 的内核态编译和运行完全分离的功能，让使用 Coolbpf API 开发 eBPF 的程序，在远程编译一次过后可以在任意内核版本和架构上直接使用，在部署时无需再次连接远程服务器；也可以将编译完成的 eBPF 程序作为 Go、Python、Rust 等语言的开发包直接使用，让开发者能轻松获得 eBPF 程序上报的信息，而完全不需要再次进行任何 eBPF 程序的编译过程。</p>
 <p>SIG 社区孵化于高校的 Linux Microscope (LMP) 项目[10]中，也已经有一些基于 eunomia-bpf 提供通用的、规范化、可以随时下载运行的 eBPF 程序或工具库的计划，目前还在继续完善的阶段。</p>
 <h2 id="参考资料"><a class="header" href="#参考资料">参考资料</a></h2>
-<p>[1] eBPF 和 WebAssembly：哪种 VM 会制霸云原生时代? <a href="https://juejin.cn/post/7043721713602789407">https://juejin.cn/post/7043721713602789407</a>
-[2] eBPF 和 Wasm：探索服务网格数据平面的未来: <a href="https://cloudnative.to/blog/ebpf-wasm-service-mesh/">https://cloudnative.to/blog/ebpf-wasm-service-mesh/</a>
-[3] eBPF 技术探索 SIG 主页： <a href="https://openanolis.cn/sig/ebpfresearch">https://openanolis.cn/sig/ebpfresearch</a>
-[4] eunomia-bpf Github 仓库：<a href="https://github.com/eunomia-bpf/eunomia-bpf">https://github.com/eunomia-bpf/eunomia-bpf</a>
-[5] eunomia-bpf 龙蜥社区镜像仓库：<a href="https://gitee.com/anolis/eunomia">https://gitee.com/anolis/eunomia</a>
-[6] sigsnoop 示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a>
-[7] eunomia-bpf 用户手册：<a href="https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641">https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641</a>
-[8] 更多示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a>
-[9] Coolbpf 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555">https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555</a>
-[10] LMP 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527">https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527</a></p>
+<ol>
+<li>eBPF 和 WebAssembly：哪种 VM 会制霸云原生时代? <a href="https://juejin.cn/post/7043721713602789407">https://juejin.cn/post/7043721713602789407</a></li>
+<li>eBPF 和 Wasm：探索服务网格数据平面的未来: <a href="https://cloudnative.to/blog/ebpf-wasm-service-mesh/">https://cloudnative.to/blog/ebpf-wasm-service-mesh/</a></li>
+<li>eBPF 技术探索 SIG 主页： <a href="https://openanolis.cn/sig/ebpfresearch">https://openanolis.cn/sig/ebpfresearch</a></li>
+<li>eunomia-bpf Github 仓库：<a href="https://github.com/eunomia-bpf/eunomia-bpf">https://github.com/eunomia-bpf/eunomia-bpf</a></li>
+<li>eunomia-bpf 龙蜥社区镜像仓库：<a href="https://gitee.com/anolis/eunomia">https://gitee.com/anolis/eunomia</a></li>
+<li>sigsnoop 示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a></li>
+<li>eunomia-bpf 用户手册：<a href="https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641">https://openanolis.cn/sig/ebpfresearch/doc/646023027267993641</a></li>
+<li>更多示例代码：<a href="https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop">https://gitee.com/anolis/eunomia/tree/master/examples/bpftools/sigsnoop</a></li>
+<li>Coolbpf 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555">https://openanolis.cn/sig/ebpfresearch/doc/633529753894377555</a></li>
+<li>LMP 项目介绍：<a href="https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527">https://openanolis.cn/sig/ebpfresearch/doc/633661297090877527</a></li>
+</ol>
 
                     </main>
 
